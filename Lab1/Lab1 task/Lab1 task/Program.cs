@@ -118,11 +118,8 @@ namespace Lab1_task
             {
                 Console.WriteLine(department);
             }
-         
-        }
-       
+        }  
     }
-
     public class Student
     {
         public int Id { get; set; }
