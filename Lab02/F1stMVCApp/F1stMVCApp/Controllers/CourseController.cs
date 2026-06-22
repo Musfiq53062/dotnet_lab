@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 namespace F1stMVCApp.Controllers
 {
     [Route("courses")]
