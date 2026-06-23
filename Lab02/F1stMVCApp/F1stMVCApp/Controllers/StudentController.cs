@@ -8,8 +8,14 @@ namespace F1stMVCApp.Controllers
         public IActionResult Index()
         {
             ViewBag.Title = "Student List";
-            ViewBag.Message = "Welcome to the student module";
-            return View();
+            ViewData["SubTitle"] = "Enrolled students this semester";
+
+            var students = new List<string>
+            {
+                "Alice Rahman", "Bob Hasan", "Carol Akter", "David Khan"
+            };
+
+            return View(students);
         }
         //displays details for a specific student
         public IActionResult Details(int id)

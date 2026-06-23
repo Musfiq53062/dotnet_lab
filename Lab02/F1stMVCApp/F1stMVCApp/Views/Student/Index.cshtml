@@ -1,14 +1,42 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@section PageActions {
+    <div style="background: #f0f0f0; padding: 8px; margin-bottom: 10px;">
+        <a asp-controller="Student" asp-action="Details" asp-route-id="1">
+            View
+            Student 1
+        </a>
+    </div>
+}
+@model List<string>
+
 @{
     ViewData["Title"] = "Students";
 }
-<h2>@ViewBag.Title</h2>
-<p>@ViewBag.Message</p>;
 
-<ul>
-    <li> <a href="/student/details/1">Student 1</a></li>
-    <li> <a href="/student/details/2">Student 2</a></li>
-    <li> <a href="/student/details/3">Student 3</a></li>
-</ul>
+<h2>@ViewBag.Title</h2>
+<p><em>@ViewData["SubTitle"]</em></p>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Name</th>
+            </tr>
+        
+            
+            @for(int i=0; i<Model.Count; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@Model[i]</td>
+                </tr>
+            }
+            
+        
+    </table>
+}
+else
+{
+    <p>No students found.</p>
+}
