@@ -19,6 +19,7 @@ namespace F1stMVCApp.Controllers
             return View();
         }
 
+
         [Route("search")] //accessible at: /courses/search?keyword=mvc
         public IActionResult Search(string keyword)
         {
