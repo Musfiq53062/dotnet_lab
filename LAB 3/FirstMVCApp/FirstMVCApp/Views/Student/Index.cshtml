@@ -1,0 +1,50 @@
+﻿@section PageActions
+{
+	<div style="background: #f0f0f0; padding: 8px; margin-bottom: 10px;">
+		<a asp-controller="Student" asp-action="Details" asp-route-id="1">View Student 1</a>
+	</div>
+}
+@model List<string>
+
+@{
+	ViewData["Title"] = "Students";
+}
+
+<h2>@ViewBag.Title</h2>
+<!-- <p>@ViewBag.Message</p> -->
+<p><em>@ViewData["SubTitle"]</em></p>
+
+@if (Model != null && Model.Count > 0)
+{
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th>SL</th>
+			<th>Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		@{ int i = 1; }
+		@foreach(var student in Model)
+		{
+			<tr>
+				<td>@i</td>
+				<td>@student</td>
+				</tr>
+				i++;
+				}
+		</tbody>
+	</table>
+}
+else
+{
+	<p>No students found.</p>
+}
+
+<!--
+<ul>
+	<li><a href="/Student/Details/1">Student 1</a></li>
+	<li><a href="/Student/Details/2">Student 2</a></li>
+	<li><a href="/Student/Details/3">Student 3</a></li>
+</ul>
+--> 
