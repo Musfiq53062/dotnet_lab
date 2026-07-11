@@ -5,6 +5,7 @@ namespace F1stMVCApp.Controllers
     public class StudentController : Controller
     {
         //displays the student list
+        [HttpGet]
         public IActionResult Index()
         {
             ViewBag.Title = "Student List";
@@ -17,6 +18,11 @@ namespace F1stMVCApp.Controllers
 
             return View(students);
         }
+        [HttpPost]
+        public IActionResult Index(string fullName, string email)
+        {
+            return View();
+        }
         //displays details for a specific student
         public IActionResult Details(int id)
         {
@@ -28,5 +34,7 @@ namespace F1stMVCApp.Controllers
         {
             return Content("This is the student module");
         }
+
+
     }
 }
