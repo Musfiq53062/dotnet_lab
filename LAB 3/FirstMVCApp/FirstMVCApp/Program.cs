@@ -19,6 +19,7 @@ namespace FirstMVCApp
                 app.UseHsts();
             }
 
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
