@@ -10,6 +10,7 @@ Db Path:
 } 
 
 
+
 Command:
 
 1. dotnet tool install --global dotnet-ef 
