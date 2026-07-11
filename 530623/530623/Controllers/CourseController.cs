@@ -12,6 +12,7 @@ namespace _530623.Controllers
         }
 
 
+
         [HttpGet]
         public IActionResult Create()
         {
