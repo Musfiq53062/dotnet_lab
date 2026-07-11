@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
             public double Marks { get; set; }
         }
 
+
         // Make lists global (class-level)
         List<int> numbers;
         List<string> names;
